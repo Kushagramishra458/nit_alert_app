@@ -243,8 +243,13 @@ app.get('/health', (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+  res.send('NIT Alert Backend is running! ✔️');
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
+
 
